@@ -6,7 +6,7 @@ RUN pip install --no-cache-dir jupyter-rsession-proxy
 # install rstudio-server
 USER root
 
-ENV RSTUDIO_VERSION "1.4.1717"
+ENV RSTUDIO_VERSION "2021.09.2-382"
 # Make sure RStudio run when booting the image
 ENV RSESSION_PROXY_RSTUDIO_1_4=yes
 
@@ -16,6 +16,5 @@ RUN apt-get update \
     apt install -y /tmp/rstudio.deb && \
     rm /tmp/rstudio.deb && \
     apt clean && rm -rf /var/lib/apt/lists/* 
-
 ENV PATH=$PATH:/usr/lib/rstudio-server/bin
 USER $NB_USER
