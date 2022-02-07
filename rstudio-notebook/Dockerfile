@@ -1,7 +1,7 @@
 FROM ghcr.io/abin-tiger/docker-stacks:scipy-notebook
 
 # install nbrsessionproxy extension
-RUN conda install -c -y conda-forge jupyter-rsession-proxy && \
+RUN conda install -c conda-forge -y jupyter-rsession-proxy && \
     conda clean -tipsy
 
 # install rstudio-server
