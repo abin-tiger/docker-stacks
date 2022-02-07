@@ -1,4 +1,4 @@
-FROM ghcr.io/abin-tiger/docker-stacks:scipy-notebook
+FROM jupyter/r-notebook:r-4.1.2
 
 # install nbrsessionproxy extension
 RUN pip install --no-cache-dir jupyter-rsession-proxy
